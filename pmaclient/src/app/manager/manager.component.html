@@ -1,0 +1,29 @@
+<div class="centered-content">
+  <div class="task-manager-container">
+    <div class="sidebar">
+      <h3 class="title has-text-primary">
+        Employee-Lists
+      </h3>
+      <div class="list-menu">
+        <a class="list-menu-item" *ngFor="let list of empdata"  [routerLink]="['/app-mannager/'+list.id]">
+          <p>{{list.empName}}</p>
+        </a>
+
+      </div>
+      <button class="button">+ Empoloyee</button>
+    </div>
+    <div class="task-list-container">
+      <h3 class="title has-text-primary">
+        Employee-Tasks
+      </h3>
+      <div class="task" *ngFor="let list of empdata">
+        <p>{{list.task}}</p>
+        <div class="progress">
+          <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+        </div>
+      </div>
+
+      <button class="circle-add-task button is-primary" routerLink = "../newtask">+ </button>
+    </div>
+  </div>
+</div>

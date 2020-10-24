@@ -1,0 +1,16 @@
+<p>
+  new-task works!
+</p>
+<div class="centered-content">
+  <div class="model-box">
+<h1 class = "title">
+  create new-task
+</h1>
+<input [(ngModel)]="tasks" class = "inputTask" type="text" placeholder="enter Task ">
+<br><br>
+<div class="buttons is-right">
+  <button class = "button" routerLink="/">cancel</button>&nbsp;
+  <button class = "button" (click)="createTask(id)">Create</button>
+</div>
+  </div>
+</div>

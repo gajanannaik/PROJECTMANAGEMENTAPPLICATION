@@ -1,0 +1,17 @@
+<p>
+  employee works!
+</p>
+
+<table border="1" style="padding:5px;">
+  <tr *ngFor="let row of empdata">
+    <td>{{ row.empId }}</td>
+    <td>{{ row.empName }}</td>
+    <td>{{ row.empEmail }}</td>
+    <td>{{ row.DeadLine }}</td>
+    <td>{{ row.task}}</td>
+  
+    
+    <td><input type="text" [(ngModel)]="notes" placeholder="Note"></td>
+    <input type="submit" (click)="addnote(row.id)" value="Add Note"><br>
+  </tr>
+</table>
